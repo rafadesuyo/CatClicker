@@ -1,5 +1,5 @@
 //cookie amount and text changes
-let currency = 0;
+let currency = 0.0;
 let currencyAmountText;
 let pageTitle;
 
@@ -23,9 +23,9 @@ function updateCurrency(amount){
     pageTitle = document.getElementById("title");
 
     //setting the currency to text.
-    currencyAmountText.textContent = currency.toString() + " cats";
+    currencyAmountText.textContent = currency.toFixed() + " cats";
     //setting the title to the currency
-    pageTitle.textContent = currency.toString() + " Cats - Cat Clicker";
+    pageTitle.textContent = currency.toFixed() + " Cats - Cat Clicker";
 
     console.log("You have: ", currency, " cats");
     return amount;
@@ -56,7 +56,7 @@ function activateUpgrade()
     else
     {
         updateCurrency(-milkUpgradePrice);
-        calculateUpgradePrice(milkUpgradePrice);
+        calculateUpgradePrice();
         milkUpgradeActive = true;
         console.log("Upgrading cat");
     }
@@ -67,7 +67,7 @@ function activateUpgrade()
 let upgrade = setInterval(function(){
     if(milkUpgradeActive)
     {
-        updateCurrency(1);
+        updateCurrency(0.1);
     }
 }, 1000);
 
@@ -78,7 +78,7 @@ function calculateUpgradePrice()
     milkUpgradePrice *= 1.2;
     milkUpgradePrice = Math.ceil(milkUpgradePrice);
     milkText = document.getElementById("upgradeButton");
-    milkText.textContent = "Upgrade Cat Price: " + milkUpgradePrice.toString();
+    milkText.textContent = "Upgrade Cat Price: " +  milkUpgradePrice.toString();
     console.log(milkUpgradePrice);
     return milkUpgradePrice;
 }
