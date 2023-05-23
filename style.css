@@ -1,0 +1,16 @@
+body{
+    text-align: center;
+    background-color: #DFA6A6;
+    background-image: url("resources/paw-pattern.svg");
+    background-repeat: repeat;
+}
+
+#cat{
+    padding-right: 5%;
+    padding-bottom: 5%;
+    padding-top: 5%;
+}
+
+#shop{
+    background-color: #FBF6E3;
+}

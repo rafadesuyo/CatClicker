@@ -6,10 +6,19 @@
         <link rel = "stylesheet" type="text/css" href="style.css">
     </head>
     <body>
-        <img id="cat" onclick="clickCat()" src = "images/cat.png" alt = "Cannot load image">
-        <p id ="currency">0 cats</p>
-        <p>0 cats per second</p>
-        <button onclick="activateUpgrade()" id="upgradeButton">Upgrade Cat Price: 15</button>
+        <div>
+            <p id ="currency">0 cats</p>
+            <p>0 cats per second</p>
+        </div>
+        
+        <div id ="cat">
+            <img id="cat" onclick="clickCat()" src = "resources/cat.svg" alt = "Cannot load image">
+        </div>
+        
+        <div id="shop">
+            <button onclick="activateUpgrade()" id="upgradeButton">Upgrade Cat Price: 15</button>
+        </div>
+        
         <script src = "script.js"></script>
     </body>
 </html> 
