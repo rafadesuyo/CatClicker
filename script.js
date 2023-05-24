@@ -67,6 +67,7 @@ function activateUpgrade()
 let upgrade = setInterval(function(){
     if(milkUpgradeActive)
     {
+        //update this to reflect the upgrade.
         updateCurrency(0.1);
     }
 }, 1000);
